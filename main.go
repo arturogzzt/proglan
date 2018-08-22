@@ -34,6 +34,9 @@ func main() {
 				fmt.Println(err)
 			} else {
 				fmt.Println("Valid expression.")
+				fmt.Println("Tokens:")
+				fmt.Println(tokens)
+
 			}
 		}
 		if !readFromFile {
