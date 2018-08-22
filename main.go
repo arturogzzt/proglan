@@ -5,7 +5,6 @@ import (
 	"fmt"
 	"os"
 	"proglan/lexicalanalizer"
-	"proglan/syntacticalanalizer"
 )
 
 func main() {
@@ -30,14 +29,8 @@ func main() {
 		if err != nil {
 			fmt.Println(err)
 		} else {
-			if err := syntacticalanalizer.ParseExpression(tokens); err != nil {
-				fmt.Println(err)
-			} else {
-				fmt.Println("Valid expression.")
-				fmt.Println("Tokens:")
-				fmt.Println(tokens)
-
-			}
+			fmt.Println("Tokens:")
+			fmt.Println(tokens)
 		}
 		if !readFromFile {
 			fmt.Print("> ")
